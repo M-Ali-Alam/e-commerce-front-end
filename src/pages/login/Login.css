@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-heading {
+    font-size: 60px;
+}
+
+h2 {
+    margin-bottom: 40px;
+    font-weight: 300;
+    font-size: 50px;
+}
+
+.errorhidden {
+    display: none;
+}
+
+.error {
+    display: block;
+    color: red;
+}

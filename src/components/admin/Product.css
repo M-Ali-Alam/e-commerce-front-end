@@ -1,0 +1,25 @@
+.admin-product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.name {
+    font-size: 20px;
+}

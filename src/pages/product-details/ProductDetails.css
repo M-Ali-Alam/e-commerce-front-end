@@ -1,0 +1,41 @@
+.product-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1024px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.details-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.details {
+    height: inherit;
+}
+
+.product-name {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.product-desc {
+    width: 100%;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}

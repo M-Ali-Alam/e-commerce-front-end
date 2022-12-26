@@ -1,0 +1,34 @@
+.nav-container {
+    height: 50px;
+    background-color:#349CFB;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nav-items {
+    display: flex;
+    width: 40%;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.cart-icon {
+    color: white;
+    width: 100px;
+    cursor: pointer;
+}
+
+.logout {
+    color: white;
+    cursor: pointer;
+}
+
