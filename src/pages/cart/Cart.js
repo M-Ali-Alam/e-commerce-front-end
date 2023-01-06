@@ -89,7 +89,7 @@ const Cart = () => {
         ) : (
           <div>
             <p>Your cart is empty :(</p>
-            <button onClick={() => url("/")}>Search Products</button>
+            <button onClick={() => url("/products")}>Search Products</button>
           </div>
         )}
       </div>
