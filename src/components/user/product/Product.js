@@ -8,6 +8,8 @@ const Product = ({ image, name, id }) => {
   return (
     <div key={id} className="user-product-container">
       <img
+        width={200}
+        height={200}
         className="product-img"
         src={`http://localhost:8080/${image}`}
         alt={name}

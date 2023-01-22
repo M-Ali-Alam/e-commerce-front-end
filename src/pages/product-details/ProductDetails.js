@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import { useAppDispatch } from "../../features/app/hooks";
@@ -26,7 +26,7 @@ const ProductDetails = () => {
   useEffect(() => {
     fetchDetails();
     console.log(product);
-  });
+  }, []);
   return (
     <>
       <Navbar />

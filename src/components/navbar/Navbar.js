@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Navbar.css";
 import logo from "../../assests/logo.png";
 import { useNavigate } from "react-router-dom";
@@ -11,6 +11,7 @@ const Navbar = () => {
   const dispatch = useAppDispatch();
 
   const logout = async () => {
+    console.log(localStorage.getItem("isAdmin"));
     localStorage.clear();
     dispatch(removeProducts());
     url("/");
@@ -31,7 +32,7 @@ const Navbar = () => {
         </div>
       ) : localStorage.getItem("isAdmin") === "true" ? (
         <div>
-          <button>Add Product</button>
+          <button onClick={() => url("/addProduct")}>Add Product</button>
           <LogoutOutlined onClick={logout} className="logout" />
         </div>
       ) : (

@@ -10,6 +10,8 @@ import Register from "./pages/register/Register";
 import ProductDetails from "./pages/product-details/ProductDetails";
 import Cart from "./pages/cart/Cart";
 import Products from "./pages/products/Products";
+import AddProduct from "./pages/products/AddProduct";
+import UpdateProduct from "./pages/products/UpdateProduct";
 
 function App() {
   const router = createBrowserRouter([
@@ -40,6 +42,14 @@ function App() {
     {
       path: "/products",
       element: <Products />,
+    },
+    {
+      path: "/addProduct/:id",
+      element: <UpdateProduct />,
+    },
+    {
+      path: "/addProduct",
+      element: <AddProduct />,
     },
   ]);
   return <RouterProvider router={router} />;

@@ -12,6 +12,7 @@ const Cart = () => {
   const [msg, setMsg] = useState("");
   const [route, setRoute] = useState("");
   const url = useNavigate();
+
   const placeOrder = async () => {
     if (localStorage.getItem("isAdmin")) {
       if (
@@ -23,10 +24,11 @@ const Cart = () => {
         setRoute("/");
       } else {
         console.log(cartitems);
+        console.log(localStorage.getItem("token"));
         await axios
-          .get("http://localhost:8080/api/products/place-order/", {
+          .post("http://localhost:8080/api/products/place-order/", {
             orderDetails: cartitems,
-            user: localStorage.getItem("user"),
+            token: localStorage.getItem("token"),
           })
           .then(() => {
             setMsg("Thank you for being a valuable customer!");
