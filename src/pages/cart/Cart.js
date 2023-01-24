@@ -23,6 +23,7 @@ const Cart = () => {
         setModal(true);
         setRoute("/");
       } else {
+        console.log("cartitems");
         console.log(cartitems);
         console.log(localStorage.getItem("token"));
         await axios

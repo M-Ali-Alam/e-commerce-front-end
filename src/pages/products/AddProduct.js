@@ -14,6 +14,7 @@ const AddProduct = () => {
   const url = useNavigate();
 
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     if (e.target.name === "image") {
@@ -36,6 +37,7 @@ const AddProduct = () => {
 
     try {
       setLoading(true);
+
       const res = await axios.post(
         "http://localhost:8080/api/products/",
         data,
@@ -51,6 +53,11 @@ const AddProduct = () => {
       setLoading(false);
       url("/");
     } catch (err) {
+      // if user uploads any other file than image
+      if (err.message === "Request failed with status code 500") {
+        setError("Please upload correct image");
+      }
+
       console.log("An error occured");
       console.error(err);
       setLoading(false);
@@ -97,6 +104,7 @@ const AddProduct = () => {
       <button type="submit" disabled={loading}>
         {loading ? "Submitting..." : "Submit"}
       </button>
+      <h3>{error}</h3>
     </form>
   );
 };
